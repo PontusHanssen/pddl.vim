@@ -11,8 +11,7 @@ endif
 
 syn match pddlVariable '?\(\w\|[0-9]\|_\|-\)\+'
 
-syn region pddlComment start=/\s*;;/ end=/$/
-
+syn region pddlComment start=/\s*;/ end=/$/  " comments OK from first ; to end of line
 
 
 syn keyword pddlBuiltin define and or not problem domain either exists forall
@@ -23,7 +22,7 @@ syn match pddlUses ':\(strips\|typing\|equality\|adl\|fluents\|\)'
 syn match pddlUses ':\(disjunctive\|negative\|existential\|universal\)\-preconditions'
 syn match pddlUses ':\(durative\-actions\|derived\-predicates\|timed\-initial\-literls\)'
 
-syn match pddlKeyword ':\(requirements\|types\|constants\|predicates\|action\|durative-action\|domain\|parameters\|effect\|precondition\|objects\|init\|goal\|functions\|duration\|condition\|derived\|metric\)'
+syn match pddlKeyword ':\(requirements\|types\|constants\|predicates\|action\|durative-action\|domain\|parameters\|effect\|precondition\|objects\|init\|goal\|functions\|duration\|condition\|process\|event\|constraint\|derived\|metric\)'
 
 let b:current_syntax = "pddl"
 highlight def link pddlBuiltin Function
